@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= t('title') %></title>
+  <%= stylesheet_link_tag    "application", media: "all",
+    "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller.controller_name %>">
+  <div id="banner">
+    <%= image_tag("logo.png") %><p>Creating Yosemite Memories that Last a Lifetime<br>
+       <em>Yosemite Summer Camps and Guide Service</em></p>
+  </div>
+  <div id="columns">
+    <div id="main">
+        <table id="nav">
+            <tr>
+                <td><%= link_to 'HOME', home_user_details_path%></td>
+                <td><%= link_to 'ABOUT US', about_user_details_path %></td>
+                <td><%= link_to 'PROGRAMS', program_user_details_path %></td>
+                <td><%= link_to 'CONTACT', new_user_detail_path %></td>
+                <td><%= link_to 'USERS', user_details_path%></td>
+            </tr>
+        </table>
+        <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

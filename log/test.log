@@ -1,0 +1,117 @@
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "user_details" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "title" varchar, "name" varchar, "email" text, "dob" date, "mobile" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160907213632')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-09-07 23:31:56 UTC], ["updated_at", 2016-09-07 23:31:56 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "user_details"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "user_details" ("user_id", "title", "name", "email", "dob", "mobile", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyString', 'MyText', '2016-09-07', 1, '2016-09-07 23:31:56.708205', '2016-09-07 23:31:56.708205', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "user_details" ("user_id", "title", "name", "email", "dob", "mobile", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyString', 'MyText', '2016-09-07', 1, '2016-09-07 23:31:56.708205', '2016-09-07 23:31:56.708205', 298486374)[0m
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+UserDetailsControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/user_details/new" for 127.0.0.1 at 2016-09-07 16:31:58 -0700
+Processing by UserDetailsController#new as HTML
+  Rendering user_details/new.html.erb within layouts/application
+  Rendered user_details/_form.html.erb (81.9ms)
+  Rendered user_details/new.html.erb within layouts/application (99.3ms)
+Completed 200 OK in 1139ms (Views: 1091.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+UserDetailsControllerTest: test_should_update_user_detail
+---------------------------------------------------------
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/user_details/980190962" for 127.0.0.1 at 2016-09-07 16:31:59 -0700
+Processing by UserDetailsController#update as HTML
+  Parameters: {"user_detail"=>{"dob"=>"2016-09-07", "email"=>"MyText", "mobile"=>"1", "name"=>"MyString", "title"=>"MyString", "user_id"=>"1"}, "id"=>"980190962"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_details/980190962
+Completed 302 Found in 82ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+UserDetailsControllerTest: test_should_show_user_detail
+-------------------------------------------------------
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/user_details/980190962" for 127.0.0.1 at 2016-09-07 16:31:59 -0700
+Processing by UserDetailsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering user_details/show.html.erb within layouts/application
+  Rendered user_details/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+UserDetailsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/user_details/980190962/edit" for 127.0.0.1 at 2016-09-07 16:31:59 -0700
+Processing by UserDetailsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering user_details/edit.html.erb within layouts/application
+  Rendered user_details/_form.html.erb (8.8ms)
+  Rendered user_details/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 35ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+UserDetailsControllerTest: test_should_destroy_user_detail
+----------------------------------------------------------
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_details"[0m
+Started DELETE "/user_details/980190962" for 127.0.0.1 at 2016-09-07 16:31:59 -0700
+Processing by UserDetailsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "user_details" WHERE "user_details"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_details
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_details"[0m
+  [1m[35m (25.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+UserDetailsControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/user_details" for 127.0.0.1 at 2016-09-07 16:31:59 -0700
+Processing by UserDetailsController#index as HTML
+  Rendering user_details/index.html.erb within layouts/application
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT "user_details".* FROM "user_details"[0m
+  Rendered user_details/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+UserDetailsControllerTest: test_should_create_user_detail
+---------------------------------------------------------
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_details"[0m
+Started POST "/user_details" for 127.0.0.1 at 2016-09-07 16:31:59 -0700
+Processing by UserDetailsController#create as HTML
+  Parameters: {"user_detail"=>{"dob"=>"2016-09-07", "email"=>"MyText", "mobile"=>"1", "name"=>"MyString", "title"=>"MyString", "user_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_details" ("user_id", "title", "name", "email", "dob", "mobile", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["title", "MyString"], ["name", "MyString"], ["email", "MyText"], ["dob", Wed, 07 Sep 2016], ["mobile", 1], ["created_at", 2016-09-07 23:31:59 UTC], ["updated_at", 2016-09-07 23:31:59 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_details/980190963
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_details"[0m
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" ORDER BY "user_details"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m

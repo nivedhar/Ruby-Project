@@ -1,0 +1,43 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  title: "Yosemite Memories"
+  home_title: "Yosemite Backpacking Trips, Day Hikes, & Outdoor Youth Summer Camp"
+  home_desc: "Yosemite Backpacking Trips, Yosemite Hiking Tours, Yosemite Guide ServiceYour Trusted Yosemite Guide Service Since 1997
+
+              Lasting Adventures, Inc. is a recognized 501 (c)(3) public benefit nonprofit with a mission to provide positive youth development and educational opportunities to the general public through safe outdoor experiences. We specialize in Yosemite backpacking trips, Yosemite day hikes, and outdoor youth summer camps. Since 1997, our program has introduced thousands of youth to nature and the wilderness experience through Adventure Based Programming. Our top-rated guide service features Yosemite backpacking trips and day hikes which help fund our outdoor youth programs. By choosing Lasting Adventures for your next Yosemite backpacking or hiking adventure, not only do you get our competitive rates, experienced and credentialed guides, all meals, and equipment, but also the satisfaction of knowing that all profits we gain from your participation goes towards our cause of helping more youth benefit from our outdoor summer camps in Yosemite."
+  about_title: "Our Team"
+  about_desc: "Our Guides/Summer Camp Counselors are the key ingredient to success for Lasting Adventures. Although we all come from different backgrounds, we all share a passion for Adventures, Yosemite, and sharing it with others in a way that will create memories to last a lifetime. Our Yosemite guide staff is a young and energetic group who all understand the importance of risk management. Some of our guides have grown-up in the program having started as a youth participant themself. While others have been selected for the backgrounds and experiences they have with youth and within the outdoor environment. It’s common to have Guides with off-season jobs of being a teacher, counselor, or other youth professional. Many of our Guides reside in the Sierras year round. On most trips you will get the privilege of meeting more than one Guide and maybe even a Junior Guide in training.
+
+              Our Guides come together for a week long staff training each year. We bond as a team through fun activities, setting goals, and debriefing. This is essentially the same Adventure Based Programming model we facilitate on our youth, group, school, and corporate adventures. Our staff training week also covers Wilderness Ethics and Leave No Trace Principals, Risk Management and Emergency Protocols, Yosemite History, Positive Youth Development, and the basics for providing outstanding customer service in the back-country. Through the connections we create during our staff training, and through their shared passions, it is common for our Guides to spend their off-time together (usually in the Tuolumne Meadows vicinity). During the summer our team works, lives, and plays together!
+
+              On every youth trip (not exceeding 12 participants) there is a ratio of at most 1:6, but in most cases the ratio is 1:4. Each trip will also have at least one male and one female Guide/ Counselor as necessary.
+
+              Through our Guide Service, on day trips and backpacking trips, we will staff each adventure with 1-2 experienced Guides who bring with them significant Yosemite backcountry experience. Ratios will not exceed 1:6; usually less.
+
+              Every leader has, at least, certification in Wilderness First Aid and C.P.R., and every overnight trip has at least one leader trained as a Wilderness First Responder or as an Emergency Medical Technician. All leaders have completed a background check."
+  program1_title: "BACKPACKING TRIPS"
+  program1_desc: "Yosemite Guide Service, Yosemite Backpacking TripsJoin us for a featured adventure or customize your own Yosemite backpacking trip with your family, friends, or any group. Whatever your passion may be, we can customize the backpacking adventure to create memories that are sure to last a lifetime! By choosing to go with our Yosemite Guide Service, Lasting Adventures, Inc., for your next custom adventure, you get the one guide service that is most experienced in the Yosemite backcountry."
+  program2_title: "DAY HIKES"
+  program2_desc: "Yosemite Guide Service, Yosemite Day Hikes, Yosemite is known for its many picturesque and scenic opportunities that are available on anyone of our shorter day hikes opportunities. Or, if you are up for a challenge, be sure to check out or Full Day hikes or Extended Day hikes which combine both the Wow and Excitement factors. As always, we are positive that whatever your choose, our Yosemite guide service will ensure that these adventures will instill memories to last a Lifetime!"
+
